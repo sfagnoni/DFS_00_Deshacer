@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255,255,255,0.95);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(60,60,60,0.18);
+    padding: 40px 32px 32px 32px;
+    text-align: center;
+    min-width: 340px;
+}
+
+h1 {
+    color: #ff6f3c;
+    margin-bottom: 24px;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 0 #fff, 2px 4px 6px #ffb86b;
+}
+
+#draw-btn {
+    background: linear-gradient(90deg, #ff6f3c 0%, #ffb86b 100%);
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(255,111,60,0.18);
+    transition: background 0.2s, transform 0.1s;
+    margin-bottom: 28px;
+}
+#draw-btn:hover {
+    background: linear-gradient(90deg, #ffb86b 0%, #ff6f3c 100%);
+    transform: scale(1.07);
+}
+
+.balls-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    margin-top: 18px;
+    min-height: 60px;
+}
+
+.ball {
+    width: 56px;
+    height: 56px;
+    background: radial-gradient(circle at 30% 30%, #fff 60%, #ff6f3c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #ff6f3c;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255,111,60,0.18);
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.1s, box-shadow 0.2s;
+    border: 3px solid #ffb86b;
+    user-select: none;
+}
+.ball:hover {
+    transform: scale(1.13) rotate(-8deg);
+    box-shadow: 0 6px 18px rgba(255,111,60,0.28);
+    background: radial-gradient(circle at 70% 70%, #fff 60%, #ffb86b 100%);
+}
+.ball:active {
+    transform: scale(0.95);
+}
