@@ -1,7 +1,6 @@
 const botonSortear = document.querySelector('#draw-btn');
 const contenedorBolillas = document.querySelector('#balls-container');
 let bolillas = [];
-let historico = [];
 
 function obtenerBolillaAleatoria() {
     return Math.ceil(Math.random() * 9);
@@ -35,8 +34,7 @@ botonSortear.addEventListener('click', sortearBolilla);
 window.addEventListener("keydown", (evento) => {
     
     if (evento.key === "z" && evento.ctrlKey) {
-        historico.pop(); // Eliminar el último estado del histórico
-        bolillas = historico[historico.length - 1]; // Recuperar el último estado de bolillas
+
         contenedorBolillas.innerHTML = '';
         bolillas.forEach(b => contenedorBolillas.appendChild(b));
         /* bolillas[bolillas.length - 1].classList.add('removing');
